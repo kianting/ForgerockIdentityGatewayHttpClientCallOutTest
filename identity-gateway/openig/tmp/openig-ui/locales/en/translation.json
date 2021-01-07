@@ -1,0 +1,1601 @@
+ {
+    "config": {
+        "dates": {
+            "monthNames": "January, February, March, April, May, June, July, August, September, October, November, December",
+            "monthNamesShort": "Jan., Feb., Mar., Apr., May., Jun., Jul., Aug., Sep., Oct., Nov., Dec.",
+            "dayNames": "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday",
+            "dayNamesShort": "Sun. , Mon., Tue., Wed., Thu., Fri., Sat."
+        },
+        "messages": {
+            "CommonMessages": {
+                "serviceUnavailable": "Service unavailable",
+                "unknown": "Unknown error - contact an administrator",
+                "errorFetchingData": "Error fetching user data",
+                "internalError": "Internal server error",
+                "forbiddenError": "Forbidden request error",
+                "notFoundError": "Not found error",
+                "badRequestError": "Bad request error",
+                "conflictError": "Detected conflict in request",
+                "incorrectRevisionError": "Can't update the record because this isn't the latest version",
+                "securityDataChanged": "Security data has been changed",
+                "tokenNotFound": "Token not found."
+            },
+            "OpenIGMessages": {
+                "fetchRouteDataFailed": "Fetch route with name '__title__' failed",
+                "deleteRouteSuccess": "'__title__' was removed",
+                "deleteRouteFailed": "Failed to remove '__title__'",
+                "invalidModel": "Can't create the route because the model isn't valid",
+                "unknownFilterType": "Unknown filter type: '__message__'",
+                "unknownGroupingPolicy": "Unknown grouping policy: '__message__'",
+                "routeSettingsSaveSuccess": "__filter__ settings saved",
+                "routeSettingsSaveFailed": "Failed to save __filter__ settings",
+                "routeSettingsDisabled": "__filter__ disabled",
+                "modelTransformationFailed": "Failed to transform the model.<br/>__message__",
+                "routeDeployedSuccess": "'__title__' was deployed",
+                "routeDeployedFailed": "Failed to deploy '__title__'",
+                "routeUndeployedSuccess": "'__title__' was undeployed",
+                "routeUndeployedFailed": "Failed to undeploy '__title__'",
+                "routeCreationFailed": "Failed to create the route",
+                "missingRouter": "The configuration file config.json must include a main router named _router. Edit config.json to add or edit the main router, and then restart IG.",
+                "invalidJson": "Invalid JSON structure",
+                "invalidJsonData": "Invalid JSON data",
+                "routeImportSuccess": "Route '__name__' imported",
+                "routeImportFailed": "Route import failed",
+                "routeUpdateSuccess": "Route '__name__' update",
+                "routeUpdateFailed": "Update of '__name__' failed",
+                "routeSwitchedToEditorModeSuccess": "Route '__name__' switched to editor mode",
+                "routeSwitchedToEditorModeFailed": "Failed to switch route '__name__' to editor mode"
+            },
+            "TransformationErrorMessages": {
+                "ssoJwtNotSet": "Provide an 'ssoTokenSubject' and/or 'jwtSubject'",
+                "emptyScriptableFilter": "Script cannot be empty"
+            }
+        },
+        "AppConfiguration": {
+            "Navigation": {
+                "links": {
+                    "routes": "Routes",
+                    "docs": "Docs"
+                },
+                "routeSideMenu": {
+                    "overview": "Overview",
+                    "capture": "Capture",
+                    "throttling": "Throttling",
+                    "amService": "AM service",
+                    "authentication": "Authentication",
+                    "authorization": "Authorization",
+                    "tokenTransformation": "Token transformation",
+                    "scripts": "Scripts",
+                    "otherFilters": "Other filters",
+                    "audit": "Audit",
+                    "chain": "Chain",
+                    "configEditor": "Editor"
+                }
+            }
+        }
+    },
+    "templates": {
+        "user": {
+            "404": {
+                "pageNotFound": "Page not found",
+                "requestedPageCouldNotBeFound": "Can't find the requested page"
+            }
+        },
+        "common": {
+            "form": {
+                "parameterList": {
+                    "parameter": "argument",
+                    "value": "value",
+                    "addParameter": "add argument",
+                    "deleteArgument": "Delete '__name__'?"
+                }
+            }
+        },
+        "routes": {
+            "status": {
+                "deployed": "Deployed",
+                "deployedDescription": "The route is saved in IG Studio and deployed to the backend.",
+                "changesPending": "Changes pending",
+                "changesPendingDescription": "The route has been deployed and then subsequently changed in IG Studio.",
+                "undeployed": "Undeployed",
+                "undeployedDescription": "The route has been created and saved in IG Studio or has been imported into IG Studio, but does not exist in the backend.",
+                "conflict": "Out of sync",
+                "conflictDescription": "A different version of this route is already deployed in the backend. Select the route and synchronize.",
+                "needUpdate": "Compatibility update required",
+                "needUpdateDescription": "The route was created in an earlier version of IG and needs to be updated for compatibility."
+            },
+            "title": "Saved routes",
+            "description": "Configure IG to protect your applications",
+            "filter": "Filter...",
+            "addRoute": "Create a route",
+            "importRoute": "Import a route",
+            "openRouteEditor": "Route editor",
+            "help": "Help",
+            "edit": "Edit",
+            "duplicate": "Duplicate",
+            "exportConfig": "Display",
+            "undeploy": "Undeploy",
+            "deploy": "Deploy",
+            "sync": "Synchronize",
+            "import": "Import",
+            "editorMode": "Editor mode",
+            "editorModeWarning": "After switching to Editor mode, you cannot go back! You will be able to use the JSON file editor to manually edit the route, but will no longer be able use the full Studio interface to add or edit filters.",
+            "deleteDialog": "Delete '__title__'?",
+            "undeployAndDeleteDialog": "Undeploy '__title__' and then delete it?",
+            "deployDialog": "Deploy '__title__'?",
+            "undeployDialog": {
+                "title": "Undeploy __title__?",
+                "description": "This route will no longer process incoming requests. However, this action can be reversed by deploying again.",
+                "okText": "Undeploy"
+            },
+            "undeployConcurrentChangesDialog": {
+                "title": "Discard concurrent changes?",
+                "description": "This route has been modified from outside of IG Studio. These changes will be lost by undeploying.",
+                "okText": "Discard"
+            },
+            "duplicateDialog": "Duplicate '__title__'?",
+            "routeSettings": "Route settings",
+            "moreOptions": "More options",
+            "duplicateNameError": "This name already exists - provide a unique name",
+            "duplicateIdError": "This ID already exists - provide a unique ID",
+            "noRouteItems": "No routes are configured",
+            "deployedDate": "(last update __date__)",
+            "fullDeployedDateFormat": "MMMM D YYYY HH:mm:ss",
+            "gridView": "Grid view",
+            "listView": "List view",
+            "verifyDeploymentDialog": {
+                "title": "Confirm",
+                "deployHint": "Deploy the version in IG Studio to the backend. The version in IG Studio overwrites the backend.",
+                "importHint": "Import the version from the backend into IG Studio. The version in the backend overwrites IG Studio.",
+                "importWarning": "When you import a route from the backend into IG Studio, you go into editor mode where you can use the JSON file editor to edit the route but can no longer use the full interface of IG Studio to add filters and handlers."
+            },
+            "uploadDialog": {
+                "title": "Import route",
+                "fileDropArea": "Drop file here or click to import.",
+                "uploadFailed": "Import failed.",
+                "notRouteStructure": "The file is not a valid JSON route. Make sure that it has a handler attribute, and that the handler is a valid JSON object or JSON string.",
+                "importButton": "Import"
+            },
+            "filters": {
+                "Off": "Off",
+                "Active": "Active",
+                "OAuth2ClientFilter": "OpenID Connect",
+                "SingleSignOnFilter": "Single Sign-On",
+                "CrossDomainSingleSignOnFilter": "Cross Domain Single Sign-On",
+                "PolicyEnforcementFilter": "AM Policy Enforcement",
+                "OAuth2ResourceServerFilter": "OAuth 2.0 Resource Server",
+                "PasswordReplayFilter": "Password Replay",
+                "ThrottlingFilter_Fixed": "Fixed - __numberOfRequests__ request/__duration__ __durationRange__",
+                "ThrottlingFilter_Fixed_plural": "Fixed - __numberOfRequests__ requests/__duration__ __durationRange__",
+                "ThrottlingFilter_Mapped": "Mapped  - __mappedBy__",
+                "ThrottlingFilter_Scripted": "Scripted"
+            },
+            "amService": {
+                "notUsed": "Not used",
+                "configured": "Configured"
+            },
+            "capture": {
+                "inboundMessages": "Inbound messages",
+                "inboundRequests": "Inbound requests",
+                "inboundResponses": "Inbound responses",
+                "outboundMessages": "Outbound messages",
+                "outboundRequests": "Outbound requests",
+                "outboundResponses": "Outbound responses",
+                "externalMessages": "Platform messages",
+                "externalRequests": "Platform requests",
+                "externalResponses": "Platform responses",
+                "globalCapture": "Global capture",
+                "globalTimer": "Global timer",
+                "entity": "Entity",
+                "context": "Context"
+            },
+            "tableColumns": {
+                "name": "Name",
+                "baseURI": "URL",
+                "status": "Status"
+            },
+            "parts": {
+                "settings": {
+                    "editTitle": "Edit route",
+                    "fields": {
+                        "name": "Name",
+                        "nameHint": "Friendly name for the route",
+                        "namePlaceHolder": "For example: my route",
+                        "id": "ID",
+                        "idHint": "Unique ID for the route",
+                        "baseURI": "Base URI",
+                        "baseURIHint": "Internal URL of the application - IG forwards proxied requests to this URL",
+                        "baseURIPlaceHolder": "For example: http://app.example.com:8081",
+                        "condition": "Condition",
+                        "conditionHint": "Path or expression to define the condition - the route handles requests that meet this condition",
+                        "path": "Path",
+                        "pathPlaceHolder": "For example: /my-route",
+                        "expression": "Expression",
+                        "jwtSession": {
+                            "enableStateless": "Enable stateless sessions",
+                            "cookieName": "Cookie name",
+                            "cookieNameHint": "The JWT cookie on the user-agent that is storing the session information",
+                            "cookieDomain": "Cookie domain",
+                            "cookieDomainHint": "The domain from which the JWT cookie can be accessed",
+                            "cookiePath": "Cookie path",
+                            "cookiePathHint": "The path from which the JWT cookie can be accessed",
+                            "cookieSecure": "Secure cookie",
+                            "cookieSecureHint": "Makes the JWT cookie transmitted only when using HTTPS",
+                            "cookieHttpOnly": "HTTP-only cookie",
+                            "cookieHttpOnlyHint": "Makes the JWT cookie inaccessible from client-side scripts",
+                            "sessionTimeout": "Session timeout",
+                            "sessionTimeoutHint": "The time for which the session is valid. If the JWT cookie is persistent, the time until the cookie expires",
+                            "persistentCookie": "Persistent cookie",
+                            "persistentCookieHint": "Select to persist the JWT cookie when the session is closed, until the cookie expires or is deleted",
+                            "sharedSecret": "Shared secret",
+                            "sharedSecretHint": "A base-64 encoded key with which to sign and verify the JWTs"
+                        },
+                        "websocket": {
+                            "enabled": "Enable WebSocket",
+                            "enabledHint": "Enable HTTP connection upgrade to WebSocket protocol",
+                            "info": "WebSocket",
+                            "infoText": "WebSocket support can be enabled directly in the configuration of ReverseProxyHandlers or Client Handlers"
+                        }
+                    }
+                },
+                "authentication": {
+                    "title": "Authentication",
+                    "description": "Authenticate users to your application",
+                    "chooseOption": "Select a way to authenticate users",
+                    "fields": {
+                        "none": "None",
+                        "noneHint": "Disable authentication",
+                        "openID": "OpenID Connect",
+                        "openIDHint": "Use OpenID Connect to authenticate users to your application",
+                        "sso": "Single Sign-On",
+                        "ssoHint": "Use ForgeRock Access Management to enable single sign-on",
+                        "cdsso": "Cross Domain Single Sign-On",
+                        "cdssoHint": "Use ForgeRock Access Management to enable cross-domain single sign-on"
+                    }
+                },
+                "authorization": {
+                    "title": "Authorization",
+                    "description": "Authorize users to access to your application",
+                    "chooseOption": "Select a way to authorize users",
+                    "fields": {
+                        "none": "None",
+                        "noneHint": "Disable authorization",
+                        "openAM": "AM Policy Enforcement",
+                        "openAMHint": "Enforce policy decisions from AM to protect the different resources of your app",
+                        "oauth2": "OAuth 2.0 Resource Server",
+                        "oauth2Hint": "Use an OAuth 2.0 Authorization Server to protect your app"
+                    }
+                },
+                "openIDAuthentication": {
+                    "dialogTitle": "Configure OpenID Connect Authentication",
+                    "title": "OpenID Connect Authentication",
+                    "fields": {
+                        "clientFilterGroup": "Client Filter",
+                        "clientRegistrationGroup": "Client Registration",
+                        "issuerGroup": "Issuer",
+                        "clientEndpoint": "Client Endpoint",
+                        "clientEndpointHint": "Base URI for OpenID Connect services",
+                        "clientEndpointPlaceHolder": "For example: /id_token",
+                        "clientId": "Client ID",
+                        "clientIdHint": "Name of the OpenID Connect client configured in the identity provider",
+                        "clientIdPlaceHolder": "For example: oidc_client",
+                        "clientSecret": "Client secret",
+                        "clientSecretHint": "Password for the client",
+                        "clientSecretPlaceHolder": "For example: password",
+                        "scopes": "Scopes",
+                        "scopesHint": "Scopes to use for the client",
+                        "tokenEndpointAuthMethod": "Basic authentication",
+                        "tokenEndpointAuthMethodHint": "Enable to use HTTP basic authentication when sending client credentials. Disable to use form parameters",
+                        "issuerWellKnownEndpoint": "Well-known endpoint",
+                        "issuerWellKnownEndpointHint": "URL to the well-known configuration resource",
+                        "issuerWellKnownEndpointPlaceHolder": "For example: https://openam.example.com:8088/openam/oauth2/.well-known/openid-configuration",
+                        "requireHttps": "Require HTTPS",
+                        "requireHttpsHint": "Require incoming requests to use TLS (HTTPS)",
+                        "useCache": "Cache OpenID Connect tokens",
+                        "cacheExpiration": "Cache duration",
+                        "cacheExpirationHint": "Duration for which to cache OpenID Connect tokens"
+                    }
+                },
+                "openAmSsoAuthentication": {
+                    "dialogTitle": "Configure Single Sign-On",
+                    "title": "Single Sign-On",
+                    "fields": {
+                        "amService": "AM service",
+                        "amServiceHint": "The AM service to use for authentication"
+                    }
+                },
+                "openAmCdssoAuthentication": {
+                    "dialogTitle": "Configure Cross-Domain Single Sign-On",
+                    "title": "Cross-Domain Single Sign-On",
+                    "fields": {
+                        "amService": "AM service",
+                        "amServiceHint": "The URL of the AM service to use for authentication",
+                        "redirectEndpoint": "Redirect endpoint",
+                        "redirectEndpointHint": "The URI to the endpoint for CDSSO",
+                        "authCookie": {
+                            "title": "Authentication cookie",
+                            "path": "Path",
+                            "pathHint": "Path protected by this authentication.",
+                            "domain": "Domain",
+                            "domainHint": "Domain to which the cookie applies. By default, the domain of the original request.",
+                            "name": "Name",
+                            "nameHint": "Name of the cookie containing the authentication token from AM."
+                        }
+                    }
+                },
+                "tokenTransformation": {
+                    "title": "Token transformation",
+                    "dialogTitle": "Token transformation",
+                    "description": "Transform OpenID Connect ID tokens issued by AM into SAML 2.0 assertions",
+                    "btnEnableTitle": "Enable token transformation",
+                    "fields": {
+                        "amService": "AM service",
+                        "amServiceHint": "The AM service to use for authentication and REST STS requests.",
+                        "enabled": "Enable token transformation",
+                        "username": "Username",
+                        "usernameHint": "The username for authenticating IG as an AM REST STS client.",
+                        "password": "Password",
+                        "passwordHint": "The password for authenticating IG as an AM REST STS client.",
+                        "idToken": "id_token",
+                        "idTokenHint": "The value of the id_token. For example, with ${attributes.openid.id_token} the value of the id_token is given in the attributes context.",
+                        "instance": "Instance",
+                        "instanceHint": "The name of the REST STS instance."
+                    }
+                },
+                "openAmAuthorization": {
+                    "dialogTitle": "Configure Access Management Authorization",
+                    "title": "Authorization",
+                    "fields": {
+                        "openAMconfigurationGroup": "Access Management configuration",
+                        "enforcementEndpointGroup": "Access Management policies",
+                        "amService": "AM service",
+                        "amServiceHint": "The AM service to use as a policy decision point",
+                        "pepRealm": "Policy administrator realm",
+                        "pepRealmHint": "AM realm where the policy administrator is configured",
+                        "realm": "Policy realm",
+                        "realmHint": "AM realm where the policy set and policies are configured",
+                        "ssoTokenSubject": "AM SSO token",
+                        "ssoTokenSubjectHint": "Expression evaluating to the AM SSO token ID string that authenticates the user making the request",
+                        "ssoTokenSubjectPlaceHolder": "For example: ${contexts.ssoToken.value}",
+                        "jwtSubject": "OpenID Connect id_token",
+                        "jwtSubjectHint": "Expression evaluating to the OpenID Connect 'id_token' that the user received after consent",
+                        "application": "Policy set",
+                        "applicationHint": "Policy set to query for the policy decision",
+                        "contextualAuthGroup": "Contextual Authorization",
+                        "headers": "Headers",
+                        "headersHint": "List of HTTP headers to forward",
+                        "headersPlaceHolder": "Click and select standard headers, or enter the names of custom headers",
+                        "address": "IP",
+                        "addressHint": "Forward the IP address of the subject making the request"
+                    }
+                },
+                "oauth2Authorization": {
+                    "dialogTitle": "Configure OAuth 2.0 Authorization",
+                    "title": "Authorization",
+                    "openAmAccessTokenResolverDeprecationWarning": "This method of resolving tokens is deprecated. Please use the \"OAuth 2.0 introspection endpoint\" access token resolver instead.",
+                    "fields": {
+                        "scopesType": "Evaluate scopes",
+                        "scopesTypeHint": "Evaluate scopes statically, or dynamically with scripts",
+                        "scopesConfigurationGroup": "Scope configuration",
+                        "tokenResolverConfigurationGroup": "Token resolver configuration",
+                        "oauth2SettingsGroup": "OAuth 2.0 Authorization settings",
+                        "scopes": "Scopes",
+                        "scopesHint": "Enter a list of one or more scopes required to access the application, as strings or expressions",
+                        "scopesPlaceHolder": "${expression1} ${expression2} ...",
+                        "scopesScript": "Script",
+                        "scopesScriptHint": "Select a script, or click Edit to enter a script",
+                        "amService": "AM service",
+                        "amServiceHint": "The AM service to use for the token info endpoint or token introspection endpoint",
+                        "introspectionEndpoint": "Introspection endpoint URI",
+                        "introspectionEndpointHint": "Absolute URI of the OAuth 2.0 introspection endpoint",
+                        "introspectionEndpointPlaceHolder": "For example: https://openam.example.com/openam/oauth2/introspect",
+                        "enableCache": "Enable cache",
+                        "cacheExpiration": "Max cache expiration",
+                        "cacheExpirationHint": "Maximum length of time to cache OAuth 2.0 access tokens",
+                        "requireHttps": "Require HTTPS",
+                        "requireHttpsHint": "Require requests to use the HTTPS scheme. Enable for production, or disable to test without keys and certificates",
+                        "realm": "Realm",
+                        "realmHint": "HTTP authentication realm to include in the WWW-Authenticate response header",
+                        "tokenResolver": "Access token resolver",
+                        "tokenResolverHint": "The method to resolve access tokens",
+                        "clientName": "Client name",
+                        "clientNameHint": "Name of the OAuth 2.0 client authorized to examine (introspect) tokens",
+                        "password": "Client secret",
+                        "passwordHint": "Password of the OAuth 2.0 client authorized to examine (introspect) tokens",
+                        "editScope": "edit"
+                    },
+                    "scopesTypes": {
+                        "StaticScopes": "Statically",
+                        "DynamicScopes": "Dynamically"
+                    },
+                    "tokenResolvers": {
+                        "OpenAmAccessTokenResolver": "AM token info endpoint",
+                        "TokenIntrospectionAccessTokenResolver": "OAuth 2.0 introspection endpoint"
+                    }
+                },
+                "capture": {
+                    "title": "Capture",
+                    "description": "Capture messages between IG, user agents, protected applications, and the ForgeRock Identity Platform",
+                    "fields": {
+                        "enabled": "Enable",
+                        "inboundGroup": "Inbound messages, between IG and the the user agent",
+                        "inbound": {
+                            "request": "Capture requests",
+                            "requestHint": "Select to capture requests from the user agent to IG",
+                            "response": "Capture responses",
+                            "responseHint": "Select to capture responses from IG to the user agent"
+                        },
+                        "outboundGroup": "Outbound messages, between IG and the protected application",
+                        "outbound": {
+                            "request": "Capture requests",
+                            "requestHint": "Select to capture requests from the protected application to IG",
+                            "response": "Capture responses",
+                            "responseHint": "Select to capture responses from IG to the protected application"
+                        },
+                        "entityGroup": "General configuration",
+                        "entityGroupHint": "When capture is enabled, the start line and headers of messages are captured",
+                        "entity": "Capture message entity",
+                        "entityHint": "Select to capture the message body",
+                        "context": "Capture message context",
+                        "contextHint": "Select to capture the message context (request attributes)",
+                        "externalGroup": "Platform messages, between IG and the ForgeRock Identity Platform",
+                        "external": {
+                            "request": "Capture requests",
+                            "requestHint": "Select to capture requests from IG to the platform",
+                            "response": "Capture responses",
+                            "responseHint": "Select to capture responses from the platform to IG"
+                        },
+                        "globalGroup": "Global decorator settings",
+                        "all": "all",
+                        "allLabel": "Capture the request and the response at all available capture points",
+                        "request": "request",
+                        "requestLabel": "Capture the request as it enters the Filter or Handler",
+                        "filteredRequest": "filtered_request",
+                        "filtered_requestLabel": "Capture the request as it enters the Filter",
+                        "response": "response",
+                        "responseLabel": "Capture the response as it leaves the Filter or Handler",
+                        "filteredResponse": "filtered_response",
+                        "filtered_responseLabel": "Capture the response as it leaves the Filter",
+                        "global": {
+                            "capturePoints": "Capture point(s)",
+                            "capturePointsHint": "Choose one or more capture points to enable the capture decorator",
+                            "capturePointsPlaceHolder": "Choose one or more capture points...",
+                            "timer": "Enable timer",
+                            "timerHint": "Select to decorate all filters and handlers with the timer decorator"
+                        }
+                    }
+                },
+                "throttling": {
+                    "title": "Throttling",
+                    "description": "Limit the rate at which requests can access the application",
+                    "numberOfRequests": "Number of requests",
+                    "period": "Period",
+                    "ratePolicyLabel": "Rate Policy",
+                    "groupingPolicyLabel": "Grouping policy",
+                    "toEach": "to each __grouping__",
+                    "throttleRate": "__numberOfRequests__ request every __duration__ __durationRange__",
+                    "throttleRate_plural": "__numberOfRequests__ requests every __duration__ __durationRange__",
+                    "fields": {
+                        "enableThrottling": "Enable throttling",
+                        "groupingPolicy": {
+                            "throttleRates": "Apply rate to",
+                            "groupingPolicy": "Group requests by",
+                            "groupingPolicyPlaceHolder": "Select criteria...",
+                            "groupingPolicyHint": "Criteria by which requests are grouped. The throttling rate is applied to each group of requests independently.",
+                            "customGroupExp": "Custom Expression",
+                            "customGroupExpPlaceholder": "For example: ${request.headers['X-CustomerLevel']}",
+                            "customGroupExpHint": "An expression to define criteria for grouping requests."
+                        },
+                        "ratePolicy": {
+                            "fixed": "$t(templates.routes.parts.throttling.fixed.name)",
+                            "fixedHint": "$t(templates.routes.parts.throttling.fixed.fixedRateHint)",
+                            "mapped": "$t(templates.routes.parts.throttling.mapped.name)",
+                            "mappedHint": "$t(templates.routes.parts.throttling.mapped.mappedRateHint)",
+                            "scripted": "$t(templates.routes.parts.throttling.scripted.name)",
+                            "scriptedHint": "$t(templates.routes.parts.throttling.scripted.scriptedRateHint)"
+                        }
+                    },
+                    "throttlingGroup": {
+                        "all": "A single group containing all requests",
+                        "custom": "Independent groups of requests"
+                    },
+                    "groupingPolicyTypes": {
+                        "all": "All requests",
+                        "clientAddress": "Remote IP address",
+                        "custom": "Custom criteria"
+                    },
+                    "fixed": {
+                        "title": "Throttling",
+                        "name": "Fixed",
+                        "dialogTitle": "Fixed rate",
+                        "fixedRate": "Fixed rate",
+                        "fixedRateHint": "Apply a fixed rate ",
+                        "forAllRequests": "for all requests",
+                        "fields": {
+                            "numberOfRequests": "$t(templates.routes.parts.throttling.numberOfRequests)",
+                            "duration": "$t(templates.routes.parts.throttling.period)"
+                        }
+                    },
+                    "mapped": {
+                        "title": "Throttling",
+                        "name": "Mapped",
+                        "custom": "Custom map criteria",
+                        "dialogTitle": "Mapping Policy",
+                        "mappingPolicy": "Mapping Policy",
+                        "mappedRateHint": "Map throttling rates to request criteria, and apply the mapped rates ",
+                        "by_custom": "by Custom criteria",
+                        "duplicateMappedRate": "Mapped rate name exists. Please select another one.",
+                        "fields": {
+                            "mappedBy": "Mapped by",
+                            "mappedByPlaceHolder": "Select criteria...",
+                            "customMapExp": "Custom Expression",
+                            "customMapExpPlaceholder": "For example: ${request.headers['X-CustomerLevel']}",
+                            "customMapExpHint": "An expression to categorize requests for mapping to a throttling rate in the table below.",
+                            "defaultRateGroup": "Default Rate",
+                            "editDefaultRate": "Edit Default Rate",
+                            "defaultRateHint": "If a request doesn’t match a mapped __rate__ apply the default rate.",
+                            "defaultRate": {
+                                "numberOfRequests": "Number of requests",
+                                "duration": "Period"
+                            },
+                            "mappedRatesGroup": "Mapped Rates",
+                            "mappedRate": {
+                                "matchValue": "Match Value",
+                                "matchValueHint": "Map this value of __rate__ to the following throttling rate.",
+                                "numberOfRequests": "Number of requests",
+                                "duration": "Period"
+                            }
+                        }
+                    },
+                    "scripted":{
+                        "dialogTitle": "Scripted throttling rate",
+                        "title": "Throttling",
+                        "name": "Scripted",
+                        "scriptedRateHint": "Apply scripted throttling rate ",
+                        "info": "Scripted throttling",
+                        "fields": {
+                            "scriptRefName": "Script name",
+                            "name": "Script name",
+                            "useDefaultRate": "Use default rate",
+                            "defaultRate": {
+                                "numberOfRequests": "$t(templates.routes.parts.throttling.numberOfRequests)",
+                                "duration": "$t(templates.routes.parts.throttling.period)"
+                            },
+                            "arguments": {
+                                "title": "Script arguments",
+                                "addItem": "Add Argument",
+                                "fields": {
+                                    "name": "Name",
+                                    "value": "Value",
+                                    "actions": "Actions"
+                                }
+                            },
+                            "script": "Script"
+                        }
+                    },
+                    "rates": {
+                        "name": "Mapped Rates",
+                        "rate": "Rate",
+                        "custom": "Custom",
+                        "editRate": "Edit Rate",
+                        "addRate": " Add Rate",
+                        "matchValue": "Match Value",
+                        "rateValueHint": "Map this value of __rate__ to the following throttling rate."
+                    }
+                },
+                "chain": {
+                    "title": "Chain",
+                    "description": "View the filters in the chain, change their order, or remove them",
+                    "noFilters": "No filters",
+                    "chainComplete": "Chain complete",
+                    "disableFilter": "Disable '__name__' and remove it from the chain?"
+                },
+                "scripts": {
+                    "title": "Scripts",
+                    "description": "Create and edit scripts for use in scriptable filters and throttling filters.",
+                    "noScripts": "No Scripts",
+                    "activeOverview" : "__active__ active of __total__",
+                    "newScript": "New Script",
+                    "deleteScript": "Delete '__name__'?",
+                    "fields": {
+                        "name": "Name",
+                        "type": "For use in"
+                    },
+                    "types": {
+                        "ScriptableFilter": "Scriptable filters",
+                        "ThrottlingFilter": "Throttling filters",
+                        "ScriptableResourceAccess": "OAuth2 Resource Server scope evaluation",
+                        "ScriptableAccessTokenResolver": "Scriptable Access Token Resolvers"
+                    },
+                    "newScriptOptions": {
+                        "newScript": "Create a new script",
+                        "storedScript": "Use a stored script"
+                    }
+                },
+                "scriptEditor": {
+                    "dialogTitle": "Edit Script",
+                    "dialogTitleCreate": "Create Script",
+                    "fields": {
+                        "name": "Script Name",
+                        "type": "For Use In",
+                        "typePlaceHolder": "Choose filter type...",
+                        "arguments": {
+                            "title": "Script Arguments",
+                            "addItem": "Add Argument",
+                            "fields": {
+                                "name": "Name",
+                                "value": "Value",
+                                "actions": "Actions"
+                            }
+                        },
+                        "script": "Script"
+                    }
+                },
+                "scriptableEntity": {
+                    "title": "Edit __nodeType__",
+                    "dialogTitle": "Edit scriptable filter",
+                    "dialogTitleCreate": "Create scriptable filter",
+                    "fields": {
+                        "name": "Name",
+                        "referenceSwitch": "Create script as",
+                        "scriptItem": {
+                            "name": "Script name",
+                            "arguments": {
+                                "title": "Script arguments",
+                                "addItem": "Add Argument",
+                                "fields": {
+                                    "name": "Name",
+                                    "value": "Value",
+                                    "actions": "Actions"
+                                }
+                            },
+                            "script": "Script"
+                        }
+                    }
+                },
+                "genericFilter": {
+                    "dialogTitle": "Edit filter",
+                    "dialogTitleCreate": "Create filter",
+                    "fields": {
+                        "name": "Name",
+                        "nameHint": "A meaningful name for the filter",
+                        "type": "Type",
+                        "filterTypeHint": "Select a filter type from the list, enter the name for a custom filter type, or enter a fully qualified classname",
+                        "config": "Config",
+                        "configHint": "A JSON object to describe the filter configuration"
+                    }
+                },
+                "otherFilters": {
+                    "title": "Other filters",
+                    "description": "Create and edit scriptable and other filters",
+                    "noFilters": "No filters",
+                    "newFilter": "New filter",
+                    "enabledOverview": "__enabled__ enabled of __total__",
+                    "deleteFilter": "Delete '__name__' ?",
+                    "newScriptableFilter": "Scriptable filter",
+                    "newGenericFilter": "Other filter",
+                    "fields": {
+                        "name": "Name",
+                        "type": "Type",
+                        "enabled": "Enabled"
+                    },
+                    "deleteTitle": "Delete",
+                    "editTitle": "Edit"
+                },
+                "jsonEditor": {
+                    "title": "Editor",
+                    "editorDescription": "Edit the route manually"
+                },
+                "audit": {
+                    "title": "Audit",
+                    "description": "Enable common audit service for a route",
+                    "eventHandlersTitle": "Event handlers",
+                    "newEventHandler": "New event handler",
+                    "eventHandlers":{
+                        "json": {
+                            "title": "JSON",
+                            "dialogTitle": "Edit JSON audit event handler",
+                            "dialogTitleCreate": "Create JSON audit event handler",
+                            "fields": {
+                                "name": "Name",
+                                "nameHint": "The name of the event handler",
+                                "logDirectory": "Log directory",
+                                "logDirectoryHint": "The file system directory where log files are written",
+                                "elasticsearchCompatible": "Elasticsearch compatible",
+                                "elasticsearchCompatibleHint": "Make audit results compatible with Elasticsearch JSON format",
+                                "rotationRetentionCheckInterval": "Rotation retention check interval",
+                                "rotationRetentionCheckIntervalHint": "Check file rotation and retention policies at this interval, given as a duration",
+                                "fileRotationGroup": "File rotation",
+                                "fileRotation": {
+                                    "rotationEnabled": "Enable file rotation",
+                                    "maxFileSize": "Max file size",
+                                    "maxFileSizeHint": "Rotate files when they reach this size (in bytes)",
+                                    "rotationTimes": "Rotation times",
+                                    "rotationTimesHint": "Rotate files at these times, given as a duration after midnight",
+                                    "rotationFilePrefix": "Rotation file prefix",
+                                    "rotationFilePrefixHint": "When a file is rotated, add this prefix to the start of the file name",
+                                    "rotationFileSuffix": "Rotation file suffix",
+                                    "rotationFileSuffixHint": "When a file is rotated, add this timestamp to the end of the file name (in simple date format)",
+                                    "rotationInterval": "Rotation interval",
+                                    "rotationIntervalHint": "Rotate files at this interval, given as a duration"
+                                },
+                                "fileRetentionGroup": "File retention",
+                                "fileRetention": {
+                                    "enabled": "Enable file retention",
+                                    "maxNumberOfHistoryFiles": "Max number of history files",
+                                    "maxNumberOfHistoryFilesHint": "Store up to this number of audit files. If the audit files exceed the limit, oldest files are deleted first",
+                                    "maxDiskSpaceToUse": "Max disk space to use",
+                                    "maxDiskSpaceToUseHint": "Use up to this disk space (in bytes) to store audit files. If the audit files exceed the limit, oldest files are deleted first",
+                                    "minFreeSpaceRequired": "Min free space required",
+                                    "minFreeSpaceRequiredHint": "The minimum free disk space required on the system that houses the audit files (in bytes). If the free disk space is below this limit, oldest files are deleted first"
+                                },
+                                "bufferingGroup": "Buffering",
+                                "buffering": {
+                                    "writeInterval": "Write interval",
+                                    "writeIntervalHint": "The delay after which the file-writer thread is scheduled to run after encountering an empty event buffer",
+                                    "maxSize": "Max size",
+                                    "maxSizeHint": "The maximum number of events that can be buffered"
+                                }
+                            }
+                        },
+                        "elasticsearch": {
+                             "title": "Elasticsearch",
+                             "dialogTitle": "Edit Elasticsearch audit event handler",
+                             "dialogTitleCreate": "Create Elasticsearch audit event handler",
+                             "fields": {
+                                "name": "Name",
+                                "nameHint": "The name of the event handler",
+                                "connectionGroup": "Connection",
+                                "connection": {
+                                    "host": "Host",
+                                    "hostHint": "Hostname or IP address of Elasticsearch. The hostname must resolve to an IP address",
+                                    "port": "Port",
+                                    "portHint": "The port used by Elasticsearch. The value must be between 0 and 65535",
+                                    "useSSL": "Use SSL",
+                                    "useSSLHint": "Select to use SSL/TLS to connect to Elasticsearch",
+                                    "username": "Username",
+                                    "usernameHint": "Username when basic authentication is enabled through Elasticsearch Shield",
+                                    "password": "Password",
+                                    "passwordHint": "Password when basic authentication is enabled through Elasticsearch Shield"
+                                },
+                                "indexNameGroup": "Index mapping",
+                                "indexMapping": {
+                                    "indexName": "Index name",
+                                    "indexNameHint": "Defines how an audit event and its fields are stored and indexed. Change if 'audit' conflicts with an existing Elasticsearch index"
+                                },
+                                "bufferingGroup": "Buffering",
+                                "buffering": {
+                                    "enabled": "Enable buffering",
+                                    "writeInterval": "Write interval",
+                                    "writeIntervalHint": "The delay after which the file-writer thread is scheduled to run after encountering an empty event buffer",
+                                    "maxSize": "Max size",
+                                    "maxSizeHint": "The maximum number of events that can be buffered",
+                                    "maxBatchedEvents": "Max batched events",
+                                    "maxBatchedEventsHint": "Maximum number of events per batch-write to Elasticsearch for each write interval"
+                                }
+                             }
+                        },
+                        "splunk": {
+                            "title": "Splunk",
+                            "dialogTitle": "Edit Splunk audit event handler",
+                            "dialogTitleCreate": "Create Splunk audit event handler",
+                            "fields": {
+                                "name": "Name",
+                                "nameHint": "The name of the event handler",
+                                "connectionGroup": "Connection",
+                                "connection": {
+                                    "host": "Host",
+                                    "hostHint": "Hostname or IP address of Splunk. The hostname must resolve to an IP address",
+                                    "port": "Port",
+                                    "portHint": "The port used by Splunk. The value must be between 0 and 65535",
+                                    "useSSL": "Use SSL",
+                                    "useSSLHint": "Select to use SSL/TLS to connect to Splunk"
+                                },
+                                "bufferingGroup": "Buffering",
+                                "buffering": {
+                                    "writeInterval": "Write interval",
+                                    "writeIntervalHint": "The delay after which the file-writer thread is scheduled to run after encountering an empty event buffer",
+                                    "maxSize": "Max size",
+                                    "maxSizeHint": "The maximum number of events that can be buffered",
+                                    "maxBatchedEvents": "Max batched events",
+                                    "maxBatchedEventsHint": "Maximum number of events per batch-write to Splunk for each write interval"
+                                },
+                                "authzToken": "Authorization token",
+                                "authzTokenHint": "The authorization token associated with the configured HTTP event collector"
+                            }
+                        }
+                    },
+                    "noEventHandlers": "No event handlers",
+                    "enabledOverview" : "__eventHandlerTypes__",
+                    "deleteEventHandler": "Delete '__name__' ?",
+                    "newJsonEventHandler": "JSON event handler",
+                    "newElasticsearchEventHandler": "Elasticsearch event handler",
+                    "newSplunkEventHandler": "Splunk event handler",
+                    "fields": {
+                        "enabledAudit": "Enable audit",
+                        "name": "Name",
+                        "type": "Type",
+                        "enabled": "Enabled",
+                        "commonAuditGroup": "Common config"
+                    }
+                },
+                "allObjects": {
+                    "title": "All Objects",
+                    "description": "View and edit all the objects in your route.",
+                    "createObject": "Create Object",
+                    "deleteObject": "Delete '__name__'?",
+                    "deleteObjectGenericSupplement": "This will remove the object from the route, potentially making the route undeployable.",
+                    "deleteChainObjectSupplement": "This will remove the chain and all objects in the chain from the route, potentially making the route undeployable."
+
+                },
+                "amServiceView": {
+                    "title": "Access Management Service",
+                    "fields": {
+                        "amServiceGroup": "Access Management Service configuration",
+                        "url": "URI",
+                        "urlPlaceHolder": "For example: https://openam.example.com:8088/openam",
+                        "urlHint": "The URI of the AM service instance.",
+                        "ssoTokenHeader": "Header / Cookie Name",
+                        "ssoTokenHeaderHint": "The name of the header or cookie where the AM service expects to find SSO tokens.",
+                        "realm": "Realm",
+                        "realmHint": "The realm of the AM service instance.",
+                        "agentGroup": "Agent",
+                        "agent": {
+                            "username": "Username",
+                            "usernameHint": "The agent username.",
+                            "password": "Password",
+                            "passwordHint": "The agent password."
+                        },
+                        "cacheGroup": "Caching",
+                        "sessionCache": {
+                            "enabled": "Enable caching",
+                            "executor": "Executor",
+                            "executorHint": "An executor service to schedule the execution of tasks, such as the eviction of entries in the cache.",
+                            "maximumSize": "Maximum size",
+                            "maximumSizeHint": "The maximum number of entries the cache can contain.",
+                            "maximumTimeToCache": "Maximum duration",
+                            "maximumTimeToCacheHint": "The maximum duration for which to cache session info."
+                        },
+                        "version": "Version",
+                        "versionHint": "The AM version of the AM service instance.",
+                        "versionPlaceHolder": "For example: 6.0"
+                    }
+                },
+                "amService": {
+                    "title": "Access Management service",
+                    "description": "Configure an AM service to be used by IG filters and handlers in this route."
+                },
+                "overview": {
+                    "baseURI": "Base URI",
+                    "condition": "Condition"
+                }
+            },
+            "manualUpdater": {
+                "dialogTitle": "Compatibility update required",
+                "missingManualUpdater": "Missing manual updater for version __version__",
+                "5_5_0": {
+                    "amService": {
+                        "fields": {
+                            "amServiceGroup": "$t(templates.routes.parts.amServiceView.title)",
+                            "url": "$t(templates.routes.parts.amServiceView.fields.url)",
+                            "urlPlaceHolder": "$t(templates.routes.parts.amServiceView.fields.urlPlaceHolder)",
+                            "urlHint": "$t(templates.routes.parts.amServiceView.fields.urlHint)",
+                            "realm": "$t(templates.routes.parts.amServiceView.fields.realm)",
+                            "realmPlaceHolder": "$t(templates.routes.parts.amServiceView.fields.realmPlaceHolder)",
+                            "realmHint": "$t(templates.routes.parts.amServiceView.fields.realmHint)"
+                        }
+                    }
+                },
+                "6_1_0": {
+                    "amService": {
+                        "fields": {
+                            "amServiceGroup":  "$t(templates.routes.parts.amServiceView.title)",
+                            "amServiceAgentGroup": "$t(templates.routes.parts.amServiceView.fields.agentGroup)",
+                            "name": "Name",
+                            "url": "$t(templates.routes.parts.amServiceView.fields.url) ($t(templates.routes.parts.amServiceView.fields.realm))",
+                            "username": "$t(templates.routes.parts.amServiceView.fields.agent.username)",
+                            "usernameHint": "$t(templates.routes.parts.amServiceView.fields.agent.usernameHint)",
+                            "password": "$t(templates.routes.parts.amServiceView.fields.agent.password)",
+                            "passwordHint": "$t(templates.routes.parts.amServiceView.fields.agent.passwordHint)"
+                        }
+                    }
+                },
+                "6_5_x": {
+                    "auditFilterUpdate": {
+                        "warning": "Before you include non-whitelisted audit event fields in the logs, consider the impact on security. Including some headers, query parameters, or cookies in the logs could cause credentials or tokens to be logged, and allow anyone with access to the logs to impersonate the holder of these credentials or tokens.",
+                        "fields": {
+                            "group": "Audit filter policy",
+                            "groupHint": "To prevent logging of sensitive data for an event, the default audit filter policy includes only whitelisted event fields in the logs.",
+                            "auditFilterUpdateOptions": {
+                                "useNew": "Include only whitelisted event fields (default from IG 7)",
+                                "keepPrevious": "Include all event fields (less secure, default before IG 7)"
+                            }
+                        }
+                    }
+                }
+            },
+            "addRouteView": {
+                "options": {
+                    "title": "How do you want to create this route?",
+                    "studio":{
+                        "title": "Structured",
+                        "description": "Use predefined menus and templates to build a route"
+                    },
+                    "editor": {
+                        "title": "Freeform",
+                        "description": "Use the Freeform Designer to create a complex, multi-branched flow"
+                    }
+                },
+                "createRoute": {
+                    "title": "Create a route to protect an application",
+                    "fields":{
+                        "applicationUrl": "Application URL",
+                        "applicationUrlHint": "URL of the application to protect",
+                        "applicationUrlPlaceHolder": "For example: http://internal.example.com/blog"
+                    },
+                    "advancedOptions": "Advanced options",
+                    "basicOptions": "Basic options",
+                    "conditionModeTooltip": "The condition expression is too complex to display in basic mode",
+                    "create": "Create route"
+                },
+                "selectTemplate": {
+                    "title": "Choose a template"
+                },
+                "duplicate": {
+                    "title": "$t(templates.routes.addRouteView.createRoute.title)",
+                    "create": "$t(templates.routes.addRouteView.createRoute.create)"
+                }
+            }
+        }
+    },
+    "common": {
+        "form": {
+            "ok": "OK",
+            "confirm": "Confirm",
+            "true": "True",
+            "false": "False",
+            "update": "Update",
+            "save": "Save",
+            "edit": "Edit",
+            "create": "Create",
+            "cancel": "Cancel",
+            "close": "Close",
+            "logout": "Log out",
+            "register": "Register",
+            "home": "Home",
+            "start": "Start",
+            "continue": "Continue",
+            "back": "Back",
+            "delete": "Delete",
+            "details": "Details",
+            "pleaseSelect": "Please Select",
+            "addUser": "Add user",
+            "decision": "Decision",
+            "accept": "Accept",
+            "reject": "Reject",
+            "createdAt": "Created at",
+            "search": "Search",
+            "submit": "Submit",
+            "actions": "Actions",
+            "complete": "Complete",
+            "reset": "Reset",
+            "add": "Add",
+            "copyright": "Copyright &copy; 2016-2020 ForgeRock AS. All rights reserved.",
+            "sessionExpired": "Session Expired",
+            "enableCookies": "Cookies must be enabled to login",
+            "reloadGrid": "Reload Grid",
+            "clearFilters": "Clear Filters",
+            "passwordPlaceholder": "••••••••••••",
+            "warning": "Warning!",
+            "optional": "optional",
+            "showPassword": "Show",
+            "hidePassword": "Hide",
+            "addLabelText": "Add \"__label__\"",
+            "configure": "Configure",
+            "pleaseConfigure": "Configure AM service.",
+            "name": "Name",
+            "type": "Type",
+            "validation": {
+                "VALID_PHONE_FORMAT": "Must be a valid phone number",
+                "VALID_NAME_FORMAT": "Must have valid name characters",
+                "VALID_EMAIL_ADDRESS_FORMAT": "Must be a valid email address",
+                "AT_LEAST_X_CAPITAL_LETTERS": "At least __numCaps__ capital letters",
+                "AT_LEAST_X_NUMBERS": "At least __numNums__ numbers",
+                "CANNOT_CONTAIN_OTHERS": "Cannot contain values from: __disallowedFields__",
+                "CANNOT_CONTAIN_CHARACTERS": "Cannot contain characters: __forbiddenChars__",
+                "MIN_LENGTH": "At least __minLength__ characters",
+                "REQUIRED": "Cannot be blank",
+                "UNIQUE": "Already exists",
+                "REAUTH_REQUIRED": "",
+                "formContainsErrors": "Form contains validation errors",
+                "atLeastOneCapitalLetter": "At least one capital letter",
+                "atLeastOneNumber": "At least one number",
+                "atLeast8Characters": "At least 8 characters",
+                "cannotMatchLogin": "Cannot match login",
+                "confirmationMatchesPassword": "Passwords must match",
+                "usernameExists": "Username already exists",
+                "emailAddressAlreadyExists": "Email address already exists",
+                "onlyAlphabeticCharacters": "Only alphabetic characters",
+                "onlyNumbersAndSpecialCharacters": "Only numbers and special characters",
+                "cannotMatchOldPassword": "Cannot match old password",
+                "minimum4Characters": "Minimum 4 characters",
+                "acceptanceRequiredForRegistration": "Acceptance required for registration",
+                "incorrectPassword": "Incorrect password",
+                "incorrectSecurityAnswer": "Incorrect answer",
+                "required": "Required",
+                "emailNotValid": "Not a valid email address.",
+                "emailExists": "Email address already exists.",
+                "shouldBeLong": "Should be long value",
+                "wrongDateFormat": "Wrong format",
+                "baseURINotValid": "Not a valid uri",
+                "baseURIContainsPath": "Cannot contain path",
+                "URINotValid": "Not a valid uri",
+                "numberGreaterThanOrEqual": "Value must be greater than or equal to __minAttr__",
+                "numberLessThanOrEqual": "Value must be less than or equal to __maxAttr__",
+                "notUrlCompatible": "Value is not URI compatible. Use only letters, numbers and dashes",
+                "notUrlPathCompatible": "Value is not URL path compatible. Path must start with '/' and cointains only letters, numbers and dashes.",
+                "invalidApplicationUrl": "Invalid application URL",
+                "ssoOrJwtTokenSubject": "Fill one or both of the following fields: '$t(templates.routes.parts.openAmAuthorization.fields.ssoTokenSubject)' and '$t(templates.routes.parts.openAmAuthorization.fields.jwtSubject)'",
+                "portNumberOutOfRange": "Port number must be between 0 and 65535",
+                "notSpaceSurrounded": "Cannot start or end with a space",
+                "agentCredentials": "Agent credentials are optional, but if username or password is present then both fields are required.",
+                "invalidVersion": "Keep format version major[.minor[.micro]]*",
+                "amServiceRequired": "AM service must be configured",
+                "amServiceAgentRequired": "AM service agent credentials are required",
+                "atLeastOneOfThem": "At least one of them is needed.",
+                "patternNotValid": "Not a valid pattern.",
+                "invalidJson": "Invalid JSON.",
+                "notHttpStatus": "Must be a valid HTTP Status Code, e.g. 200 OK",
+                "invalidValue": "Value is invalid",
+                "digits": "Must consist only of digits (0-9)"
+            }
+        },
+        "modalWindow": {
+            "title": {
+                "configExport": "JSON for the current route"
+            },
+            "button": {
+                "copyToClipboard": "Copy to clipboard"
+            },
+            "message": {
+                "copied": "Copied",
+                "copyFailed": "Copy failed"
+            }
+        },
+        "grid": {
+            "pagination": {
+                "first": "First",
+                "previous": "Previous",
+                "next": "Next",
+                "last": "Last"
+            }
+        },
+        "units": {
+            "ns": "nanosecond",
+            "ns_plural": "nanoseconds",
+            "ns_option": "nanosecond(s)",
+            "us": "microsecond",
+            "us_plural": "microseconds",
+            "us_option": "microsecond(s)",
+            "ms": "millisecond",
+            "ms_plural": "milliseconds",
+            "ms_option": "millisecond(s)",
+            "s": "second",
+            "s_plural": "seconds",
+            "s_option": "second(s)",
+            "m": "minute",
+            "m_plural": "minutes",
+            "m_option": "minute(s)",
+            "h": "hour",
+            "h_plural": "hours",
+            "h_option": "hour(s)",
+            "d": "day",
+            "d_plural": "days",
+            "d_option": "day(s)",
+            "B": "B",
+            "KB": "KB",
+            "MB": "MB",
+            "GB": "GB"
+        },
+        "footer": {
+            "versionInfo": "Identity Gateway __version__ Build __revision__ (__date__)",
+            "versionDate": "YYYY-MMMM-DD HH:mm"
+        },
+        "editorType": {
+            "structured": "Structured",
+            "freeform": "Freeform",
+            "json": "JSON"
+        }
+    },
+    "ui": {
+        "editDecorations": {
+            "tabTitle": "Decorations",
+            "emptyMessage": "There are no decorators configured that can decorate this node.",
+            "enabled": "Enabled",
+            "type": "Type: __type__",
+            "types": {
+                "BaseUriDecorator": {
+                    "hint": "Overrides the scheme, host, and port of the existing request URI, rebasing the URI and so making requests relative to a new base URI.",
+                    "fields": {
+                        "value": "Base URI"
+                    }
+                },
+                "CaptureDecorator": {
+                    "hint": "Captures request and response messages for further analysis.",
+                    "fields": {
+                        "value": "Capture Points"
+                    }
+                },
+                "TimerDecorator": {
+                    "hint": "Records time to process filters and handlers."
+                }
+            }
+        },
+        "nodeEditorTitle": "Edit __nodeType__",
+        "routeStatus": {
+            "deploying": "Deploying...",
+            "undeploying": "Undeploying..."
+        },
+        "routeBar": {
+            "routeLoadingMessage": "Loading route...",
+            "routeErrorMessage": "Failed to load route",
+            "deployButton": {
+                "title": "Deploy"
+            },
+            "syncButton": {
+                "title": "Synchronize"
+            },
+            "routeSettingsButton": {
+                "tooltip": "Route settings"
+            },
+            "routeMenuDropdown": {
+                "tooltip": "More options"
+            }
+        },
+        "routeSettings": {
+            "title": "Route settings",
+            "tabs": {
+                "general": "General",
+                "globalDecorations": {
+                    "title": "Global Decorations",
+                    "intro": "Adds decorations to every applicable object in this route. Decorations can be added to just one object via its editor."
+                },
+                "properties": {
+                    "title":  "Properties",
+                    "intro": "Arbitrary key-value pairs that can be referenced elsewhere in the route using configuration expressions (e.g. ${propertyName}). Used to centralise the configuration of values that would otherwise be duplicated throughout the route.",
+                    "propertyList": {
+                        "fields": {
+                            "name": "Name",
+                            "value": "Value",
+                            "actions": "Actions"
+                        },
+                        "addItem": "Add New"
+                    }
+                }
+            }
+        },
+        "errorTitles": {
+            "deployRoute": "Failed to deploy route",
+            "generateConfiguration": "Failed to generate configuration"
+        },
+        "routeDetail": {
+            "title": "JSON for the current route"
+        },
+        "ffeTabs": {
+            "route": "Flow",
+            "audit": "Audit",
+            "scripts": "Scripts",
+            "allObjects": "All Objects"
+        },
+        "toolbox": {
+            "title": "Objects",
+            "categories": {
+                "handlers": "Handlers",
+                "filters": "Filters"
+            },
+            "nodeTypes": {
+                "GenericHandler": "Other handler type",
+                "GenericFilter": "Other filter type"
+            }
+        },
+        "selectTypeModal": {
+            "title": "Select a node type",
+            "fields": {
+                "nodeType": "Node Type"
+            }
+        },
+        "nodeDataEditor": {
+            "fields": {
+                "type": "Type",
+                "name": "Name",
+                "config": "Config"
+            }
+        },
+        "genericFilterNodeDataEditor": {
+            "title": "Edit filter",
+            "fields": {
+                "type": "Type",
+                "name": "Name",
+                "config": "Config"
+            }
+        },
+        "genericHandlerNodeDataEditor": {
+            "title": "Edit handler",
+            "fields": {
+                "type": "Type",
+                "name": "Name",
+                "config": "Config"
+            }
+        },
+        "amServiceEditor": {
+            "fields": {
+                "amServiceGroup": "$t(templates.routes.parts.amServiceView.fields.amServiceGroup)",
+                "agentGroup": "$t(templates.routes.parts.amServiceView.fields.agentGroup)",
+                "cacheGroup": "$t(templates.routes.parts.amServiceView.fields.cacheGroup)",
+                "name": "Name",
+                "url": "$t(templates.routes.parts.amServiceView.fields.url)",
+                "urlPlaceholder": "$t(templates.routes.parts.amServiceView.fields.urlPlaceHolder)",
+                "urlHint": "$t(templates.routes.parts.amServiceView.fields.urlHint)",
+                "realm": "$t(templates.routes.parts.amServiceView.fields.realm)",
+                "realmHint": "$t(templates.routes.parts.amServiceView.fields.realmHint)",
+                "ssoTokenHeader": "$t(templates.routes.parts.amServiceView.fields.ssoTokenHeader)",
+                "ssoTokenHeaderHint": "$t(templates.routes.parts.amServiceView.fields.ssoTokenHeaderHint)",
+                "version": "$t(templates.routes.parts.amServiceView.fields.version)",
+                "versionHint": "$t(templates.routes.parts.amServiceView.fields.versionHint)",
+                "agent": {
+                    "username": "$t(templates.routes.parts.amServiceView.fields.agent.username)",
+                    "usernameHint": "$t(templates.routes.parts.amServiceView.fields.agent.usernameHint)",
+                    "password": "$t(templates.routes.parts.amServiceView.fields.agent.password)",
+                    "passwordHint": "$t(templates.routes.parts.amServiceView.fields.agent.passwordHint)"
+                },
+                "sessionCache": {
+                    "enabled": "$t(templates.routes.parts.amServiceView.fields.sessionCache.enabled)",
+                    "executor": "$t(templates.routes.parts.amServiceView.fields.sessionCache.executor)",
+                    "executorHint": "$t(templates.routes.parts.amServiceView.fields.sessionCache.executorHint)",
+                    "maximumSize": "$t(templates.routes.parts.amServiceView.fields.sessionCache.maximumSize)",
+                    "maximumSizeHint": "$t(templates.routes.parts.amServiceView.fields.sessionCache.maximumSizeHint)",
+                    "maximumTimeToCache": "$t(templates.routes.parts.amServiceView.fields.sessionCache.maximumTimeToCache)",
+                    "maximumTimeToCacheHint": "$t(templates.routes.parts.amServiceView.fields.sessionCache.maximumTimeToCacheHint)"
+                }
+            }
+        },
+        "staticResponseHandlerEditor": {
+            "fields": {
+                "name": "Name",
+                "status": "HTTP Status",
+                "contentType": "Content Type",
+                "headers": {
+                    "title": "Headers",
+                    "addItem": "Add New",
+                    "fields": {
+                        "name": "Name",
+                        "value": "Values",
+                        "actions": "Actions"
+                    }
+                },
+                "entity": "Entity"
+            }
+        },
+        "oAuth2ResourceServerFilterEditor": {
+            "fields": {
+                "accessTokenCachingGroup": "Access Token Caching",
+                "name": "Name",
+                "requireHttps": "Require HTTPS",
+                "verifyConfirmationKey": "Verify Confirmation Key",
+                "realm": "Realm",
+                "realmHint": "HTTP authentication realm to include in the WWW-Authenticate response header field when returning an HTTP 401 Unauthorized status to a user-agent that need to authenticate. Default: IG",
+                "scopes": "Scopes",
+                "scopesHint": "A list of one of more scopes that the OAuth 2.0 access_token must have.",
+                "references": {
+                    "accessTokenResolver": "Access Token Resolver"
+                }
+            }
+        },
+        "openAmAccessTokenResolverEditor": {
+            "fields": {
+                "name": "Name",
+                "references": {
+                    "providerHandler": "Provider Handler",
+                    "providerHandlerHint": "Invoke this HTTP client handler to send token info requests. Default: ForgeRockClientHandler",
+                    "amService": "AM Service"
+                }
+            }
+        },
+        "confirmationKeyVerifierAccessTokenResolverEditor": {
+            "fields": {
+                "name": "Name",
+                "references": {
+                    "delegate": "Delegate",
+                    "delegateHint": "The access token resolver to delegate to"
+                }
+            }
+        },
+        "tokenIntrospectionAccessTokenResolverEditor": {
+            "fields": {
+                "name": "Name",
+                "connectionType": "Introspect using",
+                "connectionTypeOptions": {
+                    "amService": "AM Service",
+                    "endpoint": "Endpoint URI"
+                },
+                "endpoint": "Endpoint URI",
+                "references": {
+                    "amService": "AM Service",
+                    "providerHandler": "Provider Handler",
+                    "providerHandlerHint": "Invoke this HTTP client handler to send token info requests. Default: ForgeRockClientHandler"
+                }
+            }
+        },
+        "scriptableAccessTokenResolverEditor": {
+            "fields": {
+                "name": "Name",
+                "scriptItem": {
+                    "name": "Script name",
+                    "arguments": {
+                        "title": "Script arguments",
+                        "addItem": "Add Argument",
+                        "fields": {
+                            "name": "Name",
+                            "value": "Value",
+                            "actions": "Actions"
+                        }
+                    },
+                    "script": "Script"
+                },
+                "clientHandler": "Client Handler"
+            }
+        },
+        "cacheAccessTokenResolverEditor": {
+            "fields": {
+                "name": "Name",
+                "defaultTimeout": "Default Timeout",
+                "defaultTimeoutHint": "The duration for which to cache an OAuth 2.0 access token when it doesn't provide a valid expiry value.",
+                "maximumSize": "Maximum Size",
+                "maximumSizeHint": "The maximum number of entries the cache can contain.",
+                "maximumTimeToCache": "Maximum Time To Cache",
+                "maximumTimeToCacheHint": "The maximum duration for which to cache access tokens.",
+                "references": {
+                    "delegate": "Delegate",
+                    "delegateHint": "Delegate access token resolution to another access token resolver"
+                }
+            }
+        },
+        "noConfigNodeDataEditor": {
+            "fields": {
+                "type": "Type",
+                "name": "Name"
+            }
+        },
+        "canvasToolbar": {
+            "removeSelectedElement": "Delete selected element(s)"
+        },
+        "headerFilterEditor": {
+            "title": "Edit HeaderFilter",
+            "fields": {
+                "name": "Name",
+                "nameHint": "Name of the filter",
+                "messageType": "Message type",
+                "messageTypeHint": "Indicates the type of message to filter headers for",
+                "remove": "Remove",
+                "removePlaceHolder": "For example: host",
+                "removeHint": "The names of header fields to remove from the message",
+                "add": {
+                    "title": "Add",
+                    "addItem": "Add New",
+                    "fields": {
+                        "name": "Name",
+                        "value": "Value",
+                        "actions": "Actions"
+                    }
+                },
+                "addHint": "Header fields to add to the message. The header name is specified by name. The header values are specified by an array of runtime expressions that evaluate to strings"
+            }
+        },
+        "ssoFilterEditor": {
+            "title": "Edit SingleSignOnFilter",
+            "tabs": {
+                "main": "Main",
+                "advanced": "Advanced"
+            },
+            "fields": {
+                "name": "Name",
+                "nameHint": "Name of the filter",
+                "defaultLogoutLandingPage": "Default logout landing page",
+                "defaultLogoutLandingPageHint": "The URI to which a request is redirected after the user logs out of AM",
+                "loginEndpoint": "Login endpoint",
+                "loginEndpointHint": "The URL of a service to manage authentication, and the location to which the request is redirected after authentication",
+                "logoutEndpoint": "Logout endpoint",
+                "logoutEndpointHint": "The regular expression matching the URL path of the application's logout page, used to automatically logging the user out of the AM Service",
+                "references": {
+                    "amService": "AM service",
+                    "amServiceHint": "The AM Service reference to be used as Identity Provider"
+                }
+            }
+        },
+        "policyEnforcementFilterEditor": {
+            "title": "Edit PolicyEnforcementFilter",
+            "fields": {
+                "amGroup": "Access Management configuration",
+                "policiesGroup": "Access Management policies",
+                "cacheGroup": "Cache",
+                "advancedGroup": "Advanced",
+                "name": "Name",
+                "pepRealm": "Policy administrator realm",
+                "pepRealmHint": "AM realm where the policy administrator is configured",
+                "ssoTokenSubject": "AM SSO token",
+                "ssoTokenSubjectHint": "Expression evaluating to the AM SSO token ID string that authenticates the user making the request",
+                "jwtSubject": "OpenID Connect id_token",
+                "jwtSubjectHint": "Expression evaluating to the OpenID Connect 'id_token' that the user received after consent",
+                "claimsSubject": {
+                    "title": "Claim subject",
+                    "fields": {
+                        "name": "Name",
+                        "value": "Value",
+                        "actions": "Actions"
+                    },
+                    "addItem": "Add New Property"
+                },
+                "claimsSubjectHint": "A representation of JWT claims for the subject. The subject must be specified, but the JWT claims can contain other information such as the token issuer, expiration, and so on.",
+                "cache": {
+                    "title": "Cache properties",
+                    "enabled": "Use cache",
+                    "enabledHint": "Enable and configure caching of policy decisions from AM.",
+                    "defaultTimeout": "Default timeout",
+                    "defaultTimeoutHint": "The default duration for which to cache AM policy decisions.",
+                    "maximumSize": "Maximum size",
+                    "maximumSizeHint": "The maximum number of entries the cache can contain.",
+                    "maximumTimeToCache": "Maximum time to cache",
+                    "maximumTimeToCacheHint": "The maximum duration for which to cache AM policy decisions."
+                },
+                "application": "Policy set",
+                "applicationHint": "Policy set to query for the policy decision",
+                "environment": {
+                    "title": "Environment",
+                    "fields": {
+                        "name": "Name",
+                        "value": "Value",
+                        "actions": "Actions",
+                        "isExpression": "Exp."
+                    },
+                    "addItem": "Add New Property"
+                },
+                "environmentHint": "A list of strings to forward to AM with the request for a policy decision, that represent the environment (or context) of the request. ",
+                "references": {
+                    "failureHandler": "Failure handler",
+                    "failureHandlerHint": "Handler to treat requests when they are denied by the policy decision.",
+                    "amService": "AM service",
+                    "amServiceHint": "The AM service to use as a policy decision point",
+                    "resourceUriProvider": "Resource Uri Provider",
+                    "resourceUriProviderHint": "Return the resource URL to include in policy decision requests to AM. If not set, the rebased request URI is used, and request query parameters are included."
+                }
+            }
+        },
+        "timerDecoratorEditor": {
+            "title": "Edit TimerDecorator",
+            "fields": {
+                "name": "Name",
+                "timeUnit": "Time Unit",
+                "timeUnitHint": "Unit of time used in the decorator output. Default: ms"
+            }
+        },
+        "captureDecoratorEditor": {
+            "title": "Edit CaptureDecorator",
+            "fields": {
+                "name": "Name",
+                "captureEntity": "Capture Entity",
+                "captureContext": "Capture Context",
+                "maxEntityLength": "Max Entity Length",
+                "masksGroup": "Masks",
+                "masksGroupHint": "The configuration to mask the values of headers and attributes in the logs.",
+                "masks": {
+                    "headers": "Headers",
+                    "headersHint": "Name of one or more headers whose value to mask in the logs. The header name can be a regular expression, and is case-insensitive.",
+                    "attributes": "Attributes",
+                    "attributesHint": "Name of one or more attributes whose value to mask in the logs. The attribute name can be a regular expression, and is case-insensitive.",
+                    "mask": "Mask",
+                    "maskPlaceholder": "*****",
+                    "maskHint": "Text to replace the masked header value or attribute value in the logs."
+                }
+            }
+        },
+        "requestResourceUriProvider": {
+            "title": "Edit RequestResourceUriProvider",
+            "fields": {
+                "name": "Name",
+                "useOriginalUri": "Use Original Uri",
+                "useOriginalUriHint": "In policy decision requests to AM, use the original URI of the request as the resource URL.",
+                "includeQueryParams": "Include Query Params",
+                "includeQueryParamsHint": "Include query parameters in the resource URL when requesting policy decisions from AM."
+            }
+        },
+        "configGenerator": {
+            "missingStartNodeConnection": "Start node must be connected to a handler",
+            "missingChainConnection": "Chain \"__- name__\" is missing the connection to its next handler",
+            "missingConnectionData": "DispatchHandler \"__name__\" is missing configuration for one of connections",
+            "ssoMissingAmServiceOrEndpoint": "Validation for SingleSignOnFilter \"__name__\" has failed. Please review the configuration and provide an appropriate AMService or login endpoint.",
+            "pefMissingAmService": "Validation for PolicyEnforcementFilter \"__name__\" has failed. Please review the configuration and provide an appropriate AMService.",
+            "missingScript": "The script referenced by \"__name__\" does not exist"
+        },
+        "dispatchHandlerBinding": {
+            "title": "Connection binding",
+            "fields":{
+                "name": "Name",
+                "condition": "Condition",
+                "conditionHint": "If condition evaluates true, or if no condition, dispatch request to the associated handler",
+                "baseURI": "Base URI",
+                "baseURIHint": "Override the existing request URI with the scheme, host, and port of this URI",
+                "index": "Index",
+                "indexHint": "Evaluate the condition in this order"
+            }
+        },
+        "graph": {
+            "node": {
+                "default":{
+                    "popoverDetail": "Type: __type__",
+                    "endpoints": {
+                        "input": "Input",
+                        "handler": "Handler",
+                        "output": "Output",
+                        "amService": "AM Service",
+                        "failureHandler": "Failure Handler"
+                    }
+                },
+                "Start": {
+                    "title": "Start"
+                }
+            },
+            "partialConnection": {
+                "title": "Connected to __nodes__"
+            }
+        },
+        "errorBoundary": {
+            "routeEditor": "Something went wrong."
+        },
+        "developmentModeWarning": {
+            "message": "Running in development mode - by default, all endpoints are open and accessible. Do not use this mode in a production environment."
+        },
+        "freeformTemplates": {
+            "basic": {
+                "title": "Basic",
+                "description": "A blank template."
+            },
+            "webSso": {
+                "title": "Web SSO",
+                "description": "To protect web apps by using AM for SSO and access policies.",
+                "settings": {
+                    "fields": {
+                        "label": "AM Configuration"
+                    }
+                }
+            },
+            "apiSecurity": {
+                "title": "API Security",
+                "description": "To protect APIs, including limiting request rates.",
+                "settings": {
+                    "fields": {
+                        "label": "AM Configuration",
+                        "templateData": {
+                            "scopes": "Scopes",
+                            "scopesHint":"The scopes that the OAuth 2.0 access_token must have to be authorized."
+                        }
+                    }
+                }
+            },
+            "shared": {
+                "amSettings": {
+                    "fields": {
+                        "templateData": {
+                            "amUrl": "$t(templates.routes.parts.amServiceView.fields.url)",
+                            "amUrlPlaceholder": "$t(templates.routes.parts.amServiceView.fields.urlPlaceHolder)",
+                            "amUrlHint": "$t(templates.routes.parts.amServiceView.fields.urlHint)",
+                            "amUsername": "$t(templates.routes.parts.amServiceView.fields.agent.username)",
+                            "amUsernameHint": "$t(templates.routes.parts.amServiceView.fields.agent.usernameHint)",
+                            "amPassword": "$t(templates.routes.parts.amServiceView.fields.agent.password)",
+                            "amPasswordHint": "$t(templates.routes.parts.amServiceView.fields.agent.passwordHint)"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

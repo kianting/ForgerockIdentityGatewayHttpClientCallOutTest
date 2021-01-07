@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  Copyright 2018 ForgeRock AS. All Rights Reserved
+
+  Use of this code requires a commercial software license with ForgeRock AS.
+  or with one of its affiliates. All use shall be exclusively subject
+  to such license between the licensee and ForgeRock AS.
+-->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 32 32"
+>
+  <g style="fill:none; stroke:#ffffff; stroke-width:1.36500001; stroke-miterlimit:4;stroke-dasharray:none; stroke-linecap:round;stroke-linejoin:round;">
+    <circle cx="10.24323" cy="10.4531814" r="1.8895334" />
+    <rect width="3.9779646" height="4.1768632" x="8.154799" y="18.1107604" />
+    <path d="m 12.59315,10.3537324 h 5.73604" />
+    <path d="m 10.36598,15.59315 v 2.425947" />
+    <rect width="3.7645769" height="3.7645769" x="20.8" y="7.6" transform="rotate(45 20.8 7.6)" />
+    <rect width="7.7570314" height="4.1768632" x="17.00576" y="18.4091124" />
+    <path d="m 20.78483,13.2133704 v 4.580248"/>
+    <path d="m 10.40083,15.5250854 h 9.8286" />
+  </g>
+</svg>

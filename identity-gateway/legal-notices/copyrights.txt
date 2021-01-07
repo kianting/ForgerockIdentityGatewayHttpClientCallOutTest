@@ -1,0 +1,286 @@
+{
+    "artifact": {
+        "groupId": "org.forgerock.openig",
+        "artifactId": "openig-standalone",
+        "version": "7.0.0"
+    },
+    "copyrights": [
+        "Copyright 2018-2020 ForgeRock AS"
+    ],
+    "dependencies": {
+        "api-descriptor-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2015-2020 ForgeRock AS"
+        ],
+        "chf-http-core-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2012-2020 ForgeRock AS",
+            "Copyright 2010-2011 ApexIdentity Inc",
+            "Copyright 2009 Sun Microsystems, Inc",
+            "Portions Copyright 2011-2020 ForgeRock AS",
+            "Portions Copyright 2010-2011 ApexIdentity Inc"
+        ],
+        "chf-oauth2-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2014-2020 ForgeRock AS"
+        ],
+        "chf-vertx-7.0.0": [
+            "Copyright 2018-2020 ForgeRock AS"
+        ],
+        "config-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2017-2020 ForgeRock AS"
+        ],
+        "forgerock-audit-core-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2011-2020 ForgeRock AS",
+            "Copyright 2013 Cybernetica AS",
+            "Copyright 2006-2008 Sun Microsystems, Inc",
+            "Portions Copyright 2013-2019 ForgeRock AS"
+        ],
+        "forgerock-audit-handler-csv-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2015-2020 ForgeRock AS"
+        ],
+        "forgerock-audit-handler-elasticsearch-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2015-2019 ForgeRock AS"
+        ],
+        "forgerock-audit-handler-jdbc-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2015-2020 ForgeRock AS",
+            "Portions Copyright 2016 Nomura Research Institute, Ltd"
+        ],
+        "forgerock-audit-handler-jms-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2016-2019 ForgeRock AS"
+        ],
+        "forgerock-audit-handler-json-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2016-2020 ForgeRock AS"
+        ],
+        "forgerock-audit-handler-json-stdout-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2018-2020 ForgeRock AS"
+        ],
+        "forgerock-audit-handler-splunk-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2016-2019 ForgeRock AS"
+        ],
+        "forgerock-audit-handler-syslog-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2015-2019 ForgeRock AS",
+            "Copyright 2013 Cybernetica AS",
+            "Portions Copyright 2014-2019 ForgeRock AS"
+        ],
+        "forgerock-audit-json-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2015-2019 ForgeRock AS"
+        ],
+        "forgerock-util-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2011-2020 ForgeRock AS",
+            "Copyright 2014-2015 Stack overflow users",
+            "Copyright 2010-2011 ApexIdentity Inc",
+            "Portions Copyright 2011-2020 ForgeRock AS"
+        ],
+        "i18n-core-1.4.4": [
+            "Copyright 2011-2018 ForgeRock AS",
+            "Copyright 2007-2009 Sun Microsystems, Inc",
+            "Portions Copyright 2011-2018 ForgeRock AS"
+        ],
+        "i18n-slf4j-1.4.4": [
+            "Copyright 2011-2014 ForgeRock AS"
+        ],
+        "json-resource-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2011-2020 ForgeRock AS"
+        ],
+        "json-resource-http-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2012-2020 ForgeRock AS"
+        ],
+        "json-schema-core-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2011-2019 ForgeRock AS"
+        ],
+        "json-web-token-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2011-2020 ForgeRock AS"
+        ],
+        "monitoring-api-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2018 ForgeRock AS",
+            "Copyright 2017 Pivotal Software, Inc",
+            "Portions Copyright 2018-2019 ForgeRock AS"
+        ],
+        "monitoring-dropwizard-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2018-2019 ForgeRock AS",
+            "Copyright 2017 Pivotal Software, Inc",
+            "Portions Copyright 2018 ForgeRock AS"
+        ],
+        "monitoring-http-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2017-2020 ForgeRock AS",
+            "Copyright 2016-2018 Prometheus contributors",
+            "Portions Copyright 2018-2020 ForgeRock AS"
+        ],
+        "monitoring-json-resource-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2017-2018 ForgeRock AS"
+        ],
+        "openam-annotations-7.0.0": [
+            "Copyright 2013-2020 ForgeRock AS"
+        ],
+        "openam-audit-context-7.0.0": [
+            "Copyright 2014-2019 ForgeRock AS"
+        ],
+        "openam-audit-core-7.0.0": [
+            "Copyright 2014-2020 ForgeRock AS"
+        ],
+        "openam-certs-7.0.0": [
+            "Copyright 2015-2018 ForgeRock AS",
+            "Copyright 2005 Sun Microsystems, Inc",
+            "Portions Copyright 2010-2019 ForgeRock AS"
+        ],
+        "openam-config-7.0.0": [
+            "Copyright 2014-2020 ForgeRock AS",
+            "Copyright 2005 Sun Microsystems, Inc",
+            "Portions Copyright 2016-2019 ForgeRock AS"
+        ],
+        "openam-encryption-support-7.0.0": [
+            "Copyright 2014-2019 ForgeRock AS",
+            "Copyright 2005 Sun Microsystems, Inc",
+            "Portions Copyright 2010-2020 ForgeRock AS"
+        ],
+        "openam-exceptions-7.0.0": [
+            "Copyright 2017-2020 ForgeRock AS",
+            "Copyright 2005 Sun Microsystems, Inc",
+            "Portions Copyright 2011-2020 ForgeRock AS"
+        ],
+        "openam-federation-library-7.0.0": [
+            "Copyright 2010-2020 ForgeRock AS",
+            "Copyright 2006-2009 Sun Microsystems, Inc",
+            "Portions Copyright 2010-2020 ForgeRock AS",
+            "Portions Copyright 2013-2016 Nomura Research Institute, Ltd",
+            "Portions Copyright 2012 Open Source Solution Technology Corporation"
+        ],
+        "openam-guice-core-7.0.0": [
+            "Copyright 2013-2019 ForgeRock AS"
+        ],
+        "openam-i18n-7.0.0": [
+            "Copyright 2012-2020 ForgeRock AS"
+        ],
+        "openam-idpdiscovery-7.0.0": [
+            "Copyright 2013-2018 ForgeRock AS",
+            "Copyright 2006-2007 Sun Microsystems, Inc",
+            "Portions Copyright 2013-2019 ForgeRock AS"
+        ],
+        "openam-jwt-utils-7.0.0": [
+            "Copyright 2017-2020 ForgeRock AS"
+        ],
+        "openam-keystore-7.0.0": [
+            "Copyright 2017-2019 ForgeRock AS",
+            "Copyright 2005-2008 Sun Microsystems, Inc",
+            "Copyright 2004 Mikael Grev, MiG InfoCom AB",
+            "Portions Copyright 2010-2020 ForgeRock AS"
+        ],
+        "openam-ldap-utils-7.0.0": [
+            "Copyright 2013-2019 ForgeRock AS",
+            "Copyright 2007 Sun Microsystems, Inc",
+            "Portions Copyright 2015-2019 ForgeRock AS",
+            "Portions Copyright 2016 Agile Digital Engineering"
+        ],
+        "openam-plugin-framework-7.0.0": [
+            "Copyright 2017-2020 ForgeRock AS"
+        ],
+        "openam-saml2-schema-7.0.0": [
+            "Copyright 2010-2019 ForgeRock AS",
+            "Copyright 2002-2010 Sun Microsystems, Inc",
+            "Portions Copyright 2018-2019 ForgeRock AS"
+        ],
+        "openam-secrets-7.0.0": [
+            "Copyright 2017-2020 ForgeRock AS"
+        ],
+        "openam-shared-7.0.0": [
+            "Copyright 2010-2020 ForgeRock AS",
+            "Copyright 2008-2017 the original CometD author or authors",
+            "Copyright 2008-2017 the original author or authors",
+            "Copyright 1997-2009 Sun Microsystems, Inc",
+            "Portions Copyright 2010-2020 ForgeRock AS",
+            "Portions Copyright 2014-2016 Nomura Research Institute, Ltd",
+            "Portions Copyright 2015 Rich Brown",
+            "Portions Copyright 2013 Cybernetica AS",
+            "Portions Copyright 1997-2006 Sun Microsystems, Inc"
+        ],
+        "openam-wsfederation-schema-7.0.0": [
+            "Copyright 2011-2018 ForgeRock AS",
+            "Copyright 2006-2007 Sun Microsystems, Inc",
+            "Copyright 2005 World Wide Web Consortium,",
+            "Copyright 2001 The Internet Society and W3C",
+            "Portions Copyright 2018 ForgeRock AS"
+        ],
+        "openam-xacml3-schema-7.0.0": [
+            "Copyright 2011-2019 ForgeRock AS",
+            "Copyright 2009 Sun Microsystems, Inc"
+        ],
+        "opendj-core-7.0.0": [
+            "Copyright 2011-2020 ForgeRock AS",
+            "Copyright 2013-2014 Manuel Gaupp",
+            "Copyright 2006-2011 Sun Microsystems, Inc",
+            "Portions Copyright 2011-2020 ForgeRock AS",
+            "Portions Copyright 2016 Matthew Stevenson",
+            "Portions Copyright 2012-2014 Manuel Gaupp",
+            "Portions Copyright 2009 D. J. Hagberg, Millibits Consulting, Inc"
+        ],
+        "opendj-grizzly-7.0.0": [
+            "Copyright 2013-2020 ForgeRock AS",
+            "Copyright 2006-2010 Sun Microsystems, Inc",
+            "Portions Copyright 2011-2020 ForgeRock AS"
+        ],
+        "openig-admin-7.0.0": [
+            "Copyright 2016-2020 ForgeRock AS"
+        ],
+        "openig-chf-7.0.0": [
+            "Copyright 2019-2020 ForgeRock AS"
+        ],
+        "openig-core-7.0.0": [
+            "Copyright 2012-2020 ForgeRock AS",
+            "Copyright 2010-2011 ApexIdentity Inc",
+            "Copyright 2009 Sun Microsystems, Inc",
+            "Portions Copyright 2011-2020 ForgeRock AS",
+            "Portions Copyright 2010-2011 ApexIdentity Inc"
+        ],
+        "openig-launcher-7.0.0": [
+            "Copyright 2016-2020 ForgeRock AS"
+        ],
+        "openig-oauth2-7.0.0": [
+            "Copyright 2011-2020 ForgeRock AS"
+        ],
+        "openig-openam-7.0.0": [
+            "Copyright 2015-2020 ForgeRock AS"
+        ],
+        "openig-project-7.0.0": [
+            "Copyright 2011-2020 ForgeRock AS",
+            "Copyright 2011-2017 Twitter, Inc",
+            "Copyright 2012 Stefan Petre",
+            "Copyright 2010-2011 ApexIdentity Inc",
+            "Copyright 2009 Sun Microsystems, Inc",
+            "Portions Copyright 2011-2020 ForgeRock AS",
+            "Portions Copyright 2010-2011 ApexIdentity Inc"
+        ],
+        "openig-saml-7.0.0": [
+            "Copyright 2014-2020 ForgeRock AS",
+            "Copyright 2010-2011 ApexIdentity Inc",
+            "Portions Copyright 2011-2020 ForgeRock AS"
+        ],
+        "openig-toolkit-7.0.0": [
+            "Copyright 2015-2020 ForgeRock AS"
+        ],
+        "openig-uma-7.0.0": [
+            "Copyright 2015-2020 ForgeRock AS"
+        ],
+        "openig-websocket-7.0.0": [
+            "Copyright 2018-2020 ForgeRock AS"
+        ],
+        "secrets-api-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2017-2020 ForgeRock AS"
+        ],
+        "secrets-backend-gcpkms-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2019-2020 ForgeRock AS"
+        ],
+        "secrets-backend-jwkset-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2018-2020 ForgeRock AS"
+        ],
+        "secrets-backend-keystore-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2017-2019 ForgeRock AS"
+        ],
+        "secrets-backend-oauth2-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2019 ForgeRock AS"
+        ],
+        "secrets-backend-propertyresolver-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2018-2020 ForgeRock AS"
+        ],
+        "security-26.0.0-20200727141957-8a360d1": [
+            "Copyright 2013-2019 ForgeRock AS"
+        ]
+    }
+}

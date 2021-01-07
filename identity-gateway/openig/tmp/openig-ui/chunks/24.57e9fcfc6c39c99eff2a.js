@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{1135:function(n,t,i){var a=i(135);n.exports=(a.default||a).template({compiler:[7,">= 4.0.0"],main:function(n,t,i,a,e){return'<div class="btn-group pull-right">\n    <button type="button" class="btn btn-link js-edit">\n        <i class="fa fa-pencil" aria-hidden="true"></i>\n    </button>\n    <button type="button" class="btn btn-link js-delete">\n        <i class="fa fa-times" aria-hidden="true"></i>\n    </button>\n</div>\n'},useData:!0})}}]);
+//# sourceMappingURL=24.57e9fcfc6c39c99eff2a.js.map

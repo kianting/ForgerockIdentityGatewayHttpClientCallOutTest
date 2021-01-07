@@ -1,0 +1,27 @@
+{
+  "name" : "test_route",
+  "baseURI" : "https://jsonplaceholder.typicode.com",
+  "condition" : "${matches(request.uri.path, '^/todos/1')}",
+  "handler" : {
+    "comment" : "Testing Forgerock Http Client and Promise framework",
+    "name" : "OpenAM Chain",
+    "type" : "Chain",
+    "config" : {
+      "filters" : [ {
+        "comment" : "Scripted filter for OpenAM JWK URI",
+        "name" : "TestHTTPCallout",
+        "type" : "ScriptableFilter",
+        "config" : {
+          "type" : "application/x-groovy",
+          "file" : "Test.groovy",
+          "args" : {
+            "testurl" : "https://httpbin.org",
+            "testPath" : "/get"
+          }
+        },
+        "capture" : "all"
+      } ],
+      "handler" : "ReverseProxyHandler"
+    }
+  }
+}
